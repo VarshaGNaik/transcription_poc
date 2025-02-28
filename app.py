@@ -10,6 +10,8 @@ import os
 import tempfile
 from datetime import datetime
 
+torchaudio.set_audio_backend("soundfile")
+
 def transcribe_audio_file(filename, chunk_duration=29):
     """
     Splits the input WAV file into chunks of 'chunk_duration' seconds,
